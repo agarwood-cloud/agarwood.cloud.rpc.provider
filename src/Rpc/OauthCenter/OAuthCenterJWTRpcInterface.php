@@ -15,48 +15,48 @@ interface OAuthCenterJWTRpcInterface
     /**
      * Verify that the token is available
      *
-     * @param string $token
+     * @param string|null $token
      *
      * @return bool
      */
-    public function validator(string $token): bool;
+    public function validator(?string $token): bool;
 
     /**
      * UserId Or Openid
      *
-     * @param string $parse
+     * @param string|null $parse
      *
      * @return int|string|null
      */
-    public function getUserId(string $parse): int|string|null;
+    public function getUserId(?string $parse): int|string|null;
 
     /**
      * Customer Service
      *
-     * @param string $parse
+     * @param string|null $parse
      *
      * @return string|null
      */
-    public function getCustomer(string $parse): string|null;
+    public function getCustomer(?string $parse): string|null;
 
     /**
-     * @param string $parse
+     * @param string|null $parse
      *
      * @return int|null
      */
-    public function getCustomerId(string $parse): int|null;
+    public function getCustomerId(?string $parse): int|null;
 
     /**
-     * @param string $parse
+     * @param string|null $parse
      *
      * @return string|null
      */
-    public function getNickname(string $parse): string|null;
+    public function getNickname(?string $parse): string|null;
 
     /**
-     * @param string $parse
+     * @param string|null $parse
      *
      * @return int|null
      */
-    public function getOfficialAccountId(string $parse): int|null;
+    public function getOfficialAccountId(?string $parse): int|null;
 }
