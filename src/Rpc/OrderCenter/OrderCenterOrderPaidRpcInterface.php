@@ -19,9 +19,9 @@ interface OrderCenterOrderPaidRpcInterface
      * Update payment status information
      *
      * @param string $token
-     * @param string $outTradeNo    订单号
-     * @param string $transactionId 微信支付单号
-     * @param string $paidAt        订单支付时间
+     * @param string $outTradeNo
+     * @param string $transactionId
+     * @param string $paidAt
      *
      * @return array
      */

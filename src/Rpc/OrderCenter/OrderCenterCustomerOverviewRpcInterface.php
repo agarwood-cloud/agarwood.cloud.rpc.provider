@@ -10,9 +10,6 @@
 
 namespace Agarwood\Rpc\OrderCenter;
 
-/**
- * 客服销售统计
- */
 interface OrderCenterCustomerOverviewRpcInterface
 {
     /**

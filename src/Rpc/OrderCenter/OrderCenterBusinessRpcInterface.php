@@ -10,11 +10,10 @@
 
 namespace Agarwood\Rpc\OrderCenter;
 
-
 interface OrderCenterBusinessRpcInterface
 {
     /**
-     * 销售排行榜
+     * sales ranking
      *
      * @param int $officialAccountsId
      * @param string $startAt
@@ -25,7 +24,7 @@ interface OrderCenterBusinessRpcInterface
     public function orderCenterTopSalesRank(int $officialAccountsId, string $startAt, string $endAt): array;
 
     /**
-     * 当月的营业额
+     * Turnover of the month
      *
      * @param int $officialAccountsId
      * @param string $monthStartAt
@@ -36,7 +35,7 @@ interface OrderCenterBusinessRpcInterface
     public function theMonthTurnover(int $officialAccountsId, string $monthStartAt, string $monthEndAt): array;
 
     /**
-     * 当天的营业额
+     * Turnover for the day
      *
      * @param int $officialAccountsId
      * @param string $startAt
@@ -47,7 +46,7 @@ interface OrderCenterBusinessRpcInterface
     public function theDayTurnover(int $officialAccountsId, string $startAt, string $endAt): array;
 
     /**
-     * 当天支付的笔数
+     * Number of payments on the day
      *
      * @param int $officialAccountsId
      * @param string $startAt
@@ -58,7 +57,8 @@ interface OrderCenterBusinessRpcInterface
     public function theDayPayment(int $officialAccountsId, string $startAt, string $endAt): array;
 
     /**
-     * 当天的新粉成交 i.e: 当天新粉成交 = 今天关注的新粉的成交金额
+     * New Fans Transaction of the Day
+     *   i.e: New Fans Transaction of the Day = Transaction Amount of New Fans Followed Today
      *
      * @param int $officialAccountsId
      * @param string $startAt
@@ -69,7 +69,8 @@ interface OrderCenterBusinessRpcInterface
     public function theDayFansTurnover(int $officialAccountsId, string $startAt, string $endAt): array;
 
     /**
-     * 某几天的营业额  i.e: 三天的新粉成交 = 三天内关注的粉丝的成交 在今天的成交 金额
+     * A few days' turnover
+     *    i.e: Three days' new fan turnover = Three days' follower's turnover today's turnover amount
      *
      * @param int $officialAccountsId
      * @param string $somedayStartAt
@@ -82,7 +83,7 @@ interface OrderCenterBusinessRpcInterface
     public function theSomedayTurnover(int $officialAccountsId, string $somedayStartAt, string $somedayEndAt, string $startAt, string $endAt): array;
 
     /**
-     * 客单价 = 额业额 / 购买用户数
+     * Customer unit price = amount of business / number of users purchased
      *
      * @param int $officialAccountsId
      * @param string $startAt
@@ -93,7 +94,7 @@ interface OrderCenterBusinessRpcInterface
     public function perCustomerTransaction(int $officialAccountsId, string $startAt, string $endAt): array;
 
     /**
-     * 新粉转化率 = 当天关注且有成交的粉丝数 / 当天关注的总粉丝数
+     * New fan conversion rate = the number of followers followed and traded on the day / the total number of followers followed on the day
      *
      * @param int $officialAccountsId
      * @param string $startAt
@@ -104,7 +105,7 @@ interface OrderCenterBusinessRpcInterface
     public function theDayFansConversionRate(int $officialAccountsId, string $startAt, string $endAt): array;
 
     /**
-     * 新粉变现 = 当天关注的新粉的成交金额 / 当天关注的总粉丝数量
+     * New fans monetization = transaction amount of new fans followed on the day / total number of fans followed on the day
      *
      * @param int $officialAccountsId
      * @param string $startAt
@@ -115,7 +116,7 @@ interface OrderCenterBusinessRpcInterface
     public function theDayFansPayment(int $officialAccountsId, string $startAt, string $endAt): array;
 
     /**
-     * 时间段内关注粉丝的后台成交情况
+     * Follow the fans’ backstage transactions during the time period
      *
      * @param int $officialAccountsId
      * @param array  $openid
@@ -127,7 +128,7 @@ interface OrderCenterBusinessRpcInterface
     public function turnoverTimeIntervalRank(int $officialAccountsId, array $openid, string $startAt, string $endAt): array;
 
     /**
-     * 成交单数
+     * Number of deals
      *
      * @param int $officialAccountsId
      * @param array  $openidTurnover
@@ -139,7 +140,7 @@ interface OrderCenterBusinessRpcInterface
     public function orderCenterTurnoverTimeOrderNum(int $officialAccountsId, array $openidTurnover, string $startAt, string $endAt): array;
 
     /**
-     * 时间段内成交的openid
+     * Openid traded in the time period
      *
      * @param int $officialAccountsId
      * @param string $startAt
