@@ -13,6 +13,15 @@ namespace Agarwood\Rpc\UserCenter;
 interface UserCenterCustomerRpcInterface
 {
     /**
+     * Get the detailed information of the customer corresponding to the fans
+     *
+     * @param string $openid
+     *
+     * @return array
+     */
+    public function customerForFans(string $openid): array;
+
+    /**
      * Number of fans obtain
      *
      * @param int $customerId
