@@ -17,9 +17,9 @@ interface OAuthCenterJWTRpcInterface
      *
      * @param string|null $token
      *
-     * @return array
+     * @return bool
      */
-    public function validator(?string $token): array;
+    public function validator(?string $token): bool;
 
     /**
      * UserId Or Openid
