@@ -77,4 +77,16 @@ interface UserCenterBusinessRpcInterface
      * @return array
      */
     public function userCenterTurnoverTimeBuyFans(int $officialAccountsId, array $openid, string $startAt, string $endAt): array;
+
+
+    /**
+     * The openid of fans who sold in a certain period of time
+     *
+     * @param array  $openid
+     * @param string $startAt
+     * @param string $endAt
+     *
+     * @return array
+     */
+    public function theDayTurnoverFansOpenid(array $openid, string $startAt, string $endAt): array;
 }
