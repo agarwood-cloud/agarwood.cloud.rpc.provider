@@ -51,4 +51,14 @@ interface UserCenterCustomerRpcInterface
      * @return array
      */
     public function view(int $id): array;
+
+    /**
+     * login
+     *
+     * @param string $username
+     * @param string $password
+     *
+     * @return array
+     */
+    public function login(string $username, string $password): array;
 }
