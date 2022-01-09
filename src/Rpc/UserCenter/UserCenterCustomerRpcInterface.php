@@ -24,7 +24,7 @@ interface UserCenterCustomerRpcInterface
     /**
      * Number of fans obtain
      *
-     * @param int $customerId
+     * @param int    $customerId
      * @param string $startAt
      * @param string $endAt
      *
@@ -55,9 +55,10 @@ interface UserCenterCustomerRpcInterface
     /**
      * login
      *
+     * @param int    $officialAccountId
      * @param string $username
      *
      * @return array
      */
-    public function login(string $username): array;
+    public function login(int $officialAccountId, string $username): array;
 }
