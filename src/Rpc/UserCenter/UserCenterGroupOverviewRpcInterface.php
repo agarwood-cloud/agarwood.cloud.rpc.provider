@@ -15,41 +15,41 @@ interface UserCenterGroupOverviewRpcInterface
     /**
      * All customer service information under this group
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $filter
      *
      * @return array
      */
-    public function groupForCustomer(int $officialAccountsId, array $filter): array;
+    public function groupForCustomer(int $platformId, array $filter): array;
 
     /**
      * New fans in a certain period of time
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param string $startAt
      * @param string $endAt
      *
      * @return array
      */
-    public function groupForCustomerOpenid(int $officialAccountsId, array $customerId, string $startAt, string $endAt): array;
+    public function groupForCustomerOpenid(int $platformId, array $customerId, string $startAt, string $endAt): array;
 
     /**
      * The number of new fans in each group 【Number of new fans】
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param string $startAt
      * @param string $endAt
      *
      * @return array
      */
-    public function groupForNewFansSum(int $officialAccountsId, array $customerId, string $startAt, string $endAt): array;
+    public function groupForNewFansSum(int $platformId, array $customerId, string $startAt, string $endAt): array;
 
     /**
      * Number of fans with transactions
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param array  $openid
      * @param string $startAt
@@ -57,5 +57,5 @@ interface UserCenterGroupOverviewRpcInterface
      *
      * @return array
      */
-    public function groupFromSalesFansSum(int $officialAccountsId, array $customerId, array $openid, string $startAt, string $endAt): array;
+    public function groupFromSalesFansSum(int $platformId, array $customerId, array $openid, string $startAt, string $endAt): array;
 }

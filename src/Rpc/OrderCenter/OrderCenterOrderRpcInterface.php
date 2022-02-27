@@ -15,11 +15,11 @@ interface OrderCenterOrderRpcInterface
     /**
      * Transaction data of the official account within a certain period of time
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param string $startAd
      * @param string $endAt
      *
      * @return array
      */
-    public function timeSaleCount(int $officialAccountsId, string $startAd, string $endAt): array;
+    public function timeSaleCount(int $platformId, string $startAd, string $endAt): array;
 }

@@ -18,22 +18,22 @@ interface OrderCenterProductSalesRpcInterface
     /**
      * Total sales of goods
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $productUuids
      *
      * @return array
      */
-    public function sales(int $officialAccountsId, array $productUuids): array;
+    public function sales(int $platformId, array $productUuids): array;
 
     /**
      * Sales of goods in a certain period of time
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $productUuids
      * @param string $startAt
      * @param string $endAt
      *
      * @return array
      */
-    public function timeSales(int $officialAccountsId, array $productUuids, string $startAt, string $endAt): array;
+    public function timeSales(int $platformId, array $productUuids, string $startAt, string $endAt): array;
 }

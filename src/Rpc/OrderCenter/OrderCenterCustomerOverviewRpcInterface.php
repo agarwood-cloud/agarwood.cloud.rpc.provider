@@ -15,19 +15,19 @@ interface OrderCenterCustomerOverviewRpcInterface
     /**
      * Performance
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param string $startAt
      * @param string $endAt
      *
      * @return array
      */
-    public function sales(int $officialAccountsId, array $customerId, string $startAt, string $endAt): array;
+    public function sales(int $platformId, array $customerId, string $startAt, string $endAt): array;
 
     /**
      * New fans with deals
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param array  $openid
      * @param string $startAt
@@ -35,31 +35,31 @@ interface OrderCenterCustomerOverviewRpcInterface
      *
      * @return array
      */
-    public function newFansSales(int $officialAccountsId, array $customerId, array $openid, string $startAt, string $endAt): array;
+    public function newFansSales(int $platformId, array $customerId, array $openid, string $startAt, string $endAt): array;
 
     /**
      * The openid of the fan who has a deal in a certain period of time
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param string $startAt
      * @param string $endAt
      *
      * @return array
      */
-    public function salesFansOpenid(int $officialAccountsId, array $customerId, string $startAt, string $endAt): array;
+    public function salesFansOpenid(int $platformId, array $customerId, string $startAt, string $endAt): array;
 
     /**
      * Fans who have purchased
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param string $startAt
      * @param string $endAt
      *
      * @return mixed
      */
-    public function buyFans(int $officialAccountsId, array $customerId, string $startAt, string $endAt): array;
+    public function buyFans(int $platformId, array $customerId, string $startAt, string $endAt): array;
 
     /**
      * Get customer service performance for several days

@@ -15,11 +15,11 @@ interface MallCenterOfficialAccountsRpcInterface
     /**
      * Get the config of the EasyWechat.
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      *
      * @return array
      */
-    public function officialAccountsConfig(int $officialAccountsId): array;
+    public function officialAccountsConfig(int $platformId): array;
 
     /**
      * Get all official account information
@@ -34,9 +34,9 @@ interface MallCenterOfficialAccountsRpcInterface
     /**
      * Get the details of the official account
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      *
      * @return array
      */
-    public function officialAccountsInfo(int $officialAccountsId): array;
+    public function officialAccountsInfo(int $platformId): array;
 }

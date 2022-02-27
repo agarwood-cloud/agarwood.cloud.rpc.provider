@@ -15,31 +15,31 @@ interface OrderCenterGroupOverviewRpcInterface
     /**
      * The openid of the deal in a certain period of time
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param string $startAt
      * @param string $endAt
      *
      * @return array
      */
-    public function timeSalesForOpenid(int $officialAccountsId, array $customerId, string $startAt, string $endAt): array;
+    public function timeSalesForOpenid(int $platformId, array $customerId, string $startAt, string $endAt): array;
 
     /**
      * Group Transaction [Performance]
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param string $startAt
      * @param string $endAt
      *
      * @return array
      */
-    public function groupForSales(int $officialAccountsId, array $customerId, string $startAt, string $endAt): array;
+    public function groupForSales(int $platformId, array $customerId, string $startAt, string $endAt): array;
 
     /**
      * The group’s new fan transaction [new fan performance]
      *
-     * @param int $officialAccountsId
+     * @param int $platformId
      * @param array  $customerId
      * @param array  $openid
      * @param string $startAt
@@ -47,5 +47,5 @@ interface OrderCenterGroupOverviewRpcInterface
      *
      * @return array
      */
-    public function groupForNewFansSales(int $officialAccountsId, array $customerId, array $openid, string $startAt, string $endAt): array;
+    public function groupForNewFansSales(int $platformId, array $customerId, array $openid, string $startAt, string $endAt): array;
 }
