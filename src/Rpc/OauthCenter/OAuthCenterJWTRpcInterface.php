@@ -58,5 +58,5 @@ interface OAuthCenterJWTRpcInterface
      *
      * @return int|null
      */
-    public function getOfficialAccountId(?string $parse): int|null;
+    public function getPlatformId(?string $parse): int|null;
 }
