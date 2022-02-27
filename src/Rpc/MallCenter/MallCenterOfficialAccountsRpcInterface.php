@@ -25,11 +25,11 @@ interface MallCenterOfficialAccountsRpcInterface
      * Get all official account information
      *
      *
-     * @param int $companyId
+     * @param int $enterpriseId
      *
      * @return array
      */
-    public function officialAccounts(int $companyId): array;
+    public function officialAccounts(int $enterpriseId): array;
 
     /**
      * Get the details of the official account
