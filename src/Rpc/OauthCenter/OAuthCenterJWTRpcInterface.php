@@ -63,7 +63,7 @@ interface OAuthCenterJWTRpcInterface
     /**
      * @param string|null $parse
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getEnterPriseId(?string $parse): string|null;
+    public function getEnterPriseId(?string $parse): int|null;
 }
